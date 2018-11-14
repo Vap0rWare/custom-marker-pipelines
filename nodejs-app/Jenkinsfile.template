@@ -13,6 +13,7 @@ pipeline {
           echo 'Hello World!'   
           sh 'node --version'
         }
+      }
         post {
           success {
             stash name: 'app', includes: '*.js, public/**, views/*, Dockerfile'
