@@ -30,9 +30,6 @@ stage('Test') {
          branch 'master'
       }
       steps {
-         echo "TODO - build and push image"
-      }
-      steps {
         echo "TODO - build and push image"
         unstash 'app'
       }
