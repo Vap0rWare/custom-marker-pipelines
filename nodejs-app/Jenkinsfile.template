@@ -26,6 +26,11 @@ stage('Test') {
       steps {
          echo "TODO - build and push image"
       }
+      post {
+        success {
+          stash name: 'app', includes: '*.js, public/**, views/*, Dockerfile'
+        }
+      }
     }
     stage('Deploy') {
       when {
