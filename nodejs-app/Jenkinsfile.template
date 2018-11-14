@@ -30,6 +30,10 @@ stage('Test') {
         timeout(time: 10, unit: 'SECONDS') 
       }
       input {
+        message "Should we deploy?"
+        submitter "432675"
+        submitterParameter "APPROVER"
+      }      input {
         message "Should we continue?"
       }
       steps {
