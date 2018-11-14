@@ -2,6 +2,7 @@ pipeline {
 agent { label 'nodejs-app' }
 options { 
     buildDiscarder(logRotator(numToKeepStr: '2'))
+    skipDefaultCheckout true
 }
 post {
     aborted {
@@ -36,7 +37,6 @@ stage('Test') {
       }
       input {
         message "Should we deploy?"
-        submitter "432675"
         submitterParameter "APPROVER"
       }
       steps {
