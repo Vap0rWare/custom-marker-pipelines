@@ -19,7 +19,6 @@ pipeline {
             stash name: 'app', includes: '*.js, public/**, views/*, Dockerfile'
           }
         }
-      }
     }
     stage('Build and Push Image') {
       when {
