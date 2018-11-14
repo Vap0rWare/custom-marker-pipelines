@@ -12,7 +12,6 @@ stage('Test') {
         }
       }
     }
-  }
   stage('Build and Push Image') {
       when {
          beforeAgent true
@@ -22,4 +21,5 @@ stage('Test') {
          echo "TODO - build and push image"
       }
     }
+  }
 }
